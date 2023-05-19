@@ -24,7 +24,7 @@ async def start(bot, msg, cb=True):
         InlineKeyboardButton("Join Channel", url="https://t.me/newmoviezkannada")
         ],[
         InlineKeyboardButton("ℹ️ Help", callback_data="help"),
-        InlineKeyboardButton("📡 About", callback_data="about") 
+        
     ]]  
     if cb:
         await msg.message.edit(text=txt, reply_markup=InlineKeyboardMarkup(button), disable_web_page_preview = True, parse_mode=enums.ParseMode.HTML)
@@ -42,18 +42,9 @@ async def help(bot, msg):
     await msg.message.edit(text=txt, reply_markup=InlineKeyboardMarkup(button), disable_web_page_preview = True)
 
 
-@Client.on_callback_query(filters.regex("about"))
-async def about(bot, msg):
-    me=await bot.get_me()
-    Master=f"<a href=https://t.me/MrMKN_TG>MrMKN</a> & <a href=https://t.me/kwicbotupdates>me</a>"  
-    Source="<a href=https://github.com/MrMKN/Simple-Rename-Bot>Click Here</a>"
-    txt=f"<b>Bot Name: {me.mention}\nDeveloper: <a href=https://github.com/MrMKN>MrMKN</a>\nBot Updates: <a href=https://t.me/kwicbotupdates>kwicbots™</a>\nMy Master's: {Master}\nSource Code: {Source}</b>"                 
-    button= [[        
-        InlineKeyboardButton("🚫 Close", callback_data="del"),
-        InlineKeyboardButton("⬅️ Back", callback_data="start") 
-    ]]  
-    await msg.message.edit(text=txt, reply_markup=InlineKeyboardMarkup(button), disable_web_page_preview = True, parse_mode=enums.ParseMode.HTML)
 
+
+   
 
 @Client.on_callback_query(filters.regex("del"))
 async def closed(bot, msg):
