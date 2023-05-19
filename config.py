@@ -2,7 +2,7 @@ from os import environ
 
 API_ID = int(environ.get("API_ID", "24815725"))
 API_HASH = environ.get("API_HASH", "7887b946ba021b8fdd64176664cfc26b")
-BOT_TOKEN = environ.get("BOT_TOKEN", "5654736203:AAGRwvxYiOH8OzrWjss_KavDlVwicmVz3iI")
+BOT_TOKEN = environ.get("BOT_TOKEN", "5960809176:AAE0_3_yjZNgrHIeb28Iv-MZ0e8RjpSJsY8")
 ADMIN = int(environ.get("ADMIN", "6273043621"))          
 CAPTION = environ.get("CAPTION", "Join https://t.me/kannadacinemaji")
 
